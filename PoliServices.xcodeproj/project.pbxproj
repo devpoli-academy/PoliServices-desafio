@@ -7,15 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C30F0A629390FC6002C3068 /* ServiceCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C30F0A529390FC6002C3068 /* ServiceCollectionViewCell.swift */; };
+		4C30F0A829391842002C3068 /* SelectDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C30F0A729391842002C3068 /* SelectDateViewController.swift */; };
 		4C55034529379F3600699589 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C55034429379F3600699589 /* AppDelegate.swift */; };
 		4C55034729379F3600699589 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C55034629379F3600699589 /* SceneDelegate.swift */; };
 		4C55034929379F3600699589 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C55034829379F3600699589 /* ViewController.swift */; };
 		4C55034C29379F3600699589 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C55034A29379F3600699589 /* Main.storyboard */; };
 		4C55034E29379F3900699589 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C55034D29379F3900699589 /* Assets.xcassets */; };
 		4C55035129379F3900699589 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C55034F29379F3900699589 /* LaunchScreen.storyboard */; };
+		4C5503592937D32A00699589 /* NovoServicoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5503582937D32A00699589 /* NovoServicoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4C30F0A529390FC6002C3068 /* ServiceCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceCollectionViewCell.swift; sourceTree = "<group>"; };
+		4C30F0A729391842002C3068 /* SelectDateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectDateViewController.swift; sourceTree = "<group>"; };
 		4C55034129379F3600699589 /* PoliServices.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PoliServices.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C55034429379F3600699589 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4C55034629379F3600699589 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +29,7 @@
 		4C55034D29379F3900699589 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4C55035029379F3900699589 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4C55035229379F3900699589 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4C5503582937D32A00699589 /* NovoServicoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NovoServicoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,9 +66,12 @@
 				4C55034629379F3600699589 /* SceneDelegate.swift */,
 				4C55034829379F3600699589 /* ViewController.swift */,
 				4C55034A29379F3600699589 /* Main.storyboard */,
+				4C30F0A729391842002C3068 /* SelectDateViewController.swift */,
 				4C55034D29379F3900699589 /* Assets.xcassets */,
 				4C55034F29379F3900699589 /* LaunchScreen.storyboard */,
 				4C55035229379F3900699589 /* Info.plist */,
+				4C5503582937D32A00699589 /* NovoServicoViewController.swift */,
+				4C30F0A529390FC6002C3068 /* ServiceCollectionViewCell.swift */,
 			);
 			path = PoliServices;
 			sourceTree = "<group>";
@@ -99,6 +108,7 @@
 				TargetAttributes = {
 					4C55034029379F3600699589 = {
 						CreatedOnToolsVersion = 13.3;
+						LastSwiftMigration = 1410;
 					};
 				};
 			};
@@ -138,8 +148,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C30F0A829391842002C3068 /* SelectDateViewController.swift in Sources */,
+				4C30F0A629390FC6002C3068 /* ServiceCollectionViewCell.swift in Sources */,
 				4C55034929379F3600699589 /* ViewController.swift in Sources */,
 				4C55034529379F3600699589 /* AppDelegate.swift in Sources */,
+				4C5503592937D32A00699589 /* NovoServicoViewController.swift in Sources */,
 				4C55034729379F3600699589 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -285,16 +298,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = BF2YF4NNR9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PoliServices/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Poli Services";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -303,6 +320,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.devpoli.PoliServices;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -313,16 +332,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = BF2YF4NNR9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PoliServices/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Poli Services";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -331,6 +354,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.devpoli.PoliServices;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
