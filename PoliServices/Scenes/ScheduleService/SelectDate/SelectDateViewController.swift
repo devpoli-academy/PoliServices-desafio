@@ -22,9 +22,10 @@ class SelectDateViewController: UIViewController {
     }
 
     @IBAction func clicou(_ sender: Any) {
-        UserDefaults.standard.set(datePicker.date.timeIntervalSince1970, forKey: "service_date")
-        UserDefaults.standard.set(servico, forKey: "service_name")
+        UserDefaults.standard.set(datePicker.date.timeIntervalSince1970, forKey: ServiceKeys.serviceDate.rawValue)
+        
+        UserDefaults.standard.set(servico, forKey: ServiceKeys.serviceName.rawValue)
+        
         dismiss(animated: true)
     }
-
 }
