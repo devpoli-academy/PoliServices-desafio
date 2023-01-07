@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4B20FF97295697DB0038955D /* ServiceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B20FF96295697DB0038955D /* ServiceModel.swift */; };
 		4B20FF99295697F20038955D /* ServiceKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B20FF98295697F20038955D /* ServiceKeys.swift */; };
+		4B5F6C902969C54B00F1D14B /* DescriptionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5F6C8F2969C54B00F1D14B /* DescriptionModel.swift */; };
 		4B6F4B80295783CE00D67D79 /* CustomTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6F4B7F295783CE00D67D79 /* CustomTimer.swift */; };
 		4BCB961D29565FF400B15A58 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCB961C29565FF400B15A58 /* HomeViewModel.swift */; };
 		4BCB961F2956602700B15A58 /* HomeViewModelProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCB961E2956602700B15A58 /* HomeViewModelProtocols.swift */; };
@@ -27,6 +28,7 @@
 /* Begin PBXFileReference section */
 		4B20FF96295697DB0038955D /* ServiceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceModel.swift; sourceTree = "<group>"; };
 		4B20FF98295697F20038955D /* ServiceKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceKeys.swift; sourceTree = "<group>"; };
+		4B5F6C8F2969C54B00F1D14B /* DescriptionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionModel.swift; sourceTree = "<group>"; };
 		4B6F4B7F295783CE00D67D79 /* CustomTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTimer.swift; sourceTree = "<group>"; };
 		4BCB961C29565FF400B15A58 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		4BCB961E2956602700B15A58 /* HomeViewModelProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelProtocols.swift; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 				4BCB961C29565FF400B15A58 /* HomeViewModel.swift */,
 				4BCB961E2956602700B15A58 /* HomeViewModelProtocols.swift */,
 				4B20FF96295697DB0038955D /* ServiceModel.swift */,
+				4B5F6C8F2969C54B00F1D14B /* DescriptionModel.swift */,
 				4B20FF98295697F20038955D /* ServiceKeys.swift */,
 			);
 			path = Home;
@@ -104,8 +107,8 @@
 		4BCB961A29565F8B00B15A58 /* SelectService */ = {
 			isa = PBXGroup;
 			children = (
-				4C30F0A529390FC6002C3068 /* ServiceCollectionViewCell.swift */,
 				4C5503582937D32A00699589 /* NovoServicoViewController.swift */,
+				4C30F0A529390FC6002C3068 /* ServiceCollectionViewCell.swift */,
 			);
 			path = SelectService;
 			sourceTree = "<group>";
@@ -238,6 +241,7 @@
 				4C55034929379F3600699589 /* HomeViewController.swift in Sources */,
 				4B20FF97295697DB0038955D /* ServiceModel.swift in Sources */,
 				4C55034529379F3600699589 /* AppDelegate.swift in Sources */,
+				4B5F6C902969C54B00F1D14B /* DescriptionModel.swift in Sources */,
 				4C5503592937D32A00699589 /* NovoServicoViewController.swift in Sources */,
 				4BCB96222956768300B15A58 /* DateManager.swift in Sources */,
 				4C55034729379F3600699589 /* SceneDelegate.swift in Sources */,

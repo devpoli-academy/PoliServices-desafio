@@ -6,6 +6,8 @@ protocol HomeViewModelProtocol: ScheduledServiceProtocol {
     
     func getCurrentDate(_ completion: (String) -> Void)
     
+    func getDescriptionLabel(_ completion: (String) -> Void)
+    
     func startTimer()
 }
 
@@ -20,5 +22,6 @@ protocol ScheduledServiceProtocol {
 protocol ScheduledServiceDelegate: AnyObject {
     
     func didGetScheduledService(service: ServiceModel)
+    
     func noScheduledService()
 }

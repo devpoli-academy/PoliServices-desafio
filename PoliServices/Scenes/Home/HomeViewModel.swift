@@ -16,6 +16,13 @@ class HomeViewModel: HomeViewModelProtocol {
         }
     }
     
+    func getDescriptionLabel(_ completion: (String) -> Void) {
+        
+        let descriptionText = DescriptionModel.description
+        
+        completion(descriptionText)
+    }
+    
     func startTimer() {
         
         customTimer.startTimer { [weak self] in
