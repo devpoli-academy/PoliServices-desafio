@@ -167,7 +167,7 @@ DevServices</string>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" red="0.87726437369999999" green="0.8824504299" blue="0.92282551530000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.8784313725490196" green="0.88235294117647056" blue="0.92156862745098034" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="evq-Pi-xQH" firstAttribute="top" secondItem="yVb-x9-kt7" secondAttribute="bottom" constant="4" id="3JY-j5-DiB"/>
                             <constraint firstItem="evq-Pi-xQH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="22" id="BXM-oi-Fri"/>
@@ -198,7 +198,7 @@ DevServices</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1042.0289855072465" y="116.51785714285714"/>
+            <point key="canvasLocation" x="1040.8" y="116.00985221674877"/>
         </scene>
         <!--Novo Serviço-->
         <scene sceneID="8cy-di-t6U">

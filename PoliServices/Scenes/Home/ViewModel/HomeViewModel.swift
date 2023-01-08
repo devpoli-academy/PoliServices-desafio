@@ -46,7 +46,6 @@ extension HomeViewModel: ScheduledServiceProtocol {
         
         let hasService = serviceDate >= currentDate
         
-        
         if hasService {
             guard let serviceName = UserDefaults.standard.string(forKey: ServiceKeys.serviceName.rawValue) else { return }
 

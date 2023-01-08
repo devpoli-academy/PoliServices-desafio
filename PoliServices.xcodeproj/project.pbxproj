@@ -7,10 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B15571C296B746C001C8C7F /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B15571B296B746C001C8C7F /* CustomImageView.swift */; };
+		4B15571E296B7B0D001C8C7F /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B15571D296B7B0D001C8C7F /* CustomButton.swift */; };
 		4B20FF97295697DB0038955D /* ServiceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B20FF96295697DB0038955D /* ServiceModel.swift */; };
 		4B20FF99295697F20038955D /* ServiceKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B20FF98295697F20038955D /* ServiceKeys.swift */; };
 		4B5F6C902969C54B00F1D14B /* DescriptionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5F6C8F2969C54B00F1D14B /* DescriptionModel.swift */; };
 		4B6F4B80295783CE00D67D79 /* CustomTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6F4B7F295783CE00D67D79 /* CustomTimer.swift */; };
+		4B7AE5A5296B42160060AD41 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7AE5A4296B42160060AD41 /* HomeView.swift */; };
+		4B7AE5AD296B46230060AD41 /* CustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7AE5AC296B46230060AD41 /* CustomLabel.swift */; };
+		4B94CE76296B4D7700144E87 /* DescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B94CE75296B4D7700144E87 /* DescriptionView.swift */; };
+		4B94CE79296B50C500144E87 /* CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B94CE78296B50C500144E87 /* CustomColors.swift */; };
+		4B94CE7B296B52F700144E87 /* CustomDividerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B94CE7A296B52F700144E87 /* CustomDividerView.swift */; };
+		4B94CE7D296B56B700144E87 /* LastServiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B94CE7C296B56B700144E87 /* LastServiceView.swift */; };
 		4BCB961D29565FF400B15A58 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCB961C29565FF400B15A58 /* HomeViewModel.swift */; };
 		4BCB961F2956602700B15A58 /* HomeViewModelProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCB961E2956602700B15A58 /* HomeViewModelProtocols.swift */; };
 		4BCB96222956768300B15A58 /* DateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCB96212956768300B15A58 /* DateManager.swift */; };
@@ -26,10 +34,18 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4B15571B296B746C001C8C7F /* CustomImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
+		4B15571D296B7B0D001C8C7F /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		4B20FF96295697DB0038955D /* ServiceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceModel.swift; sourceTree = "<group>"; };
 		4B20FF98295697F20038955D /* ServiceKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceKeys.swift; sourceTree = "<group>"; };
 		4B5F6C8F2969C54B00F1D14B /* DescriptionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionModel.swift; sourceTree = "<group>"; };
 		4B6F4B7F295783CE00D67D79 /* CustomTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTimer.swift; sourceTree = "<group>"; };
+		4B7AE5A4296B42160060AD41 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		4B7AE5AC296B46230060AD41 /* CustomLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLabel.swift; sourceTree = "<group>"; };
+		4B94CE75296B4D7700144E87 /* DescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionView.swift; sourceTree = "<group>"; };
+		4B94CE78296B50C500144E87 /* CustomColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColors.swift; sourceTree = "<group>"; };
+		4B94CE7A296B52F700144E87 /* CustomDividerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDividerView.swift; sourceTree = "<group>"; };
+		4B94CE7C296B56B700144E87 /* LastServiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastServiceView.swift; sourceTree = "<group>"; };
 		4BCB961C29565FF400B15A58 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		4BCB961E2956602700B15A58 /* HomeViewModelProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelProtocols.swift; sourceTree = "<group>"; };
 		4BCB96212956768300B15A58 /* DateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateManager.swift; sourceTree = "<group>"; };
@@ -65,6 +81,72 @@
 			path = CustomTImer;
 			sourceTree = "<group>";
 		};
+		4B7AE5A6296B425C0060AD41 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4B7AE5A4296B42160060AD41 /* HomeView.swift */,
+				4B94CE75296B4D7700144E87 /* DescriptionView.swift */,
+				4B94CE7C296B56B700144E87 /* LastServiceView.swift */,
+				4C55034829379F3600699589 /* HomeViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4B7AE5A7296B42660060AD41 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				4BCB961C29565FF400B15A58 /* HomeViewModel.swift */,
+				4BCB961E2956602700B15A58 /* HomeViewModelProtocols.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		4B7AE5A8296B42750060AD41 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4B20FF96295697DB0038955D /* ServiceModel.swift */,
+				4B5F6C8F2969C54B00F1D14B /* DescriptionModel.swift */,
+				4B20FF98295697F20038955D /* ServiceKeys.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4B7AE5A9296B460B0060AD41 /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				4B7AE5AA296B46130060AD41 /* DesignSystem */,
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		4B7AE5AA296B46130060AD41 /* DesignSystem */ = {
+			isa = PBXGroup;
+			children = (
+				4B94CE77296B50B800144E87 /* Colors */,
+				4B7AE5AB296B461A0060AD41 /* Components */,
+			);
+			path = DesignSystem;
+			sourceTree = "<group>";
+		};
+		4B7AE5AB296B461A0060AD41 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				4B7AE5AC296B46230060AD41 /* CustomLabel.swift */,
+				4B94CE7A296B52F700144E87 /* CustomDividerView.swift */,
+				4B15571B296B746C001C8C7F /* CustomImageView.swift */,
+				4B15571D296B7B0D001C8C7F /* CustomButton.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		4B94CE77296B50B800144E87 /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				4B94CE78296B50C500144E87 /* CustomColors.swift */,
+			);
+			path = Colors;
+			sourceTree = "<group>";
+		};
 		4BCB961629565F2800B15A58 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
@@ -77,12 +159,9 @@
 		4BCB961729565F3300B15A58 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				4C55034829379F3600699589 /* HomeViewController.swift */,
-				4BCB961C29565FF400B15A58 /* HomeViewModel.swift */,
-				4BCB961E2956602700B15A58 /* HomeViewModelProtocols.swift */,
-				4B20FF96295697DB0038955D /* ServiceModel.swift */,
-				4B5F6C8F2969C54B00F1D14B /* DescriptionModel.swift */,
-				4B20FF98295697F20038955D /* ServiceKeys.swift */,
+				4B7AE5A8296B42750060AD41 /* Model */,
+				4B7AE5A6296B425C0060AD41 /* View */,
+				4B7AE5A7296B42660060AD41 /* ViewModel */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -149,6 +228,7 @@
 		4C55034329379F3600699589 /* PoliServices */ = {
 			isa = PBXGroup;
 			children = (
+				4B7AE5A9296B460B0060AD41 /* Infrastructure */,
 				4BCB961B29565FC400B15A58 /* AppDelegate */,
 				4BCB961629565F2800B15A58 /* Scenes */,
 				4BCB96202956767900B15A58 /* DateManager */,
@@ -234,18 +314,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B6F4B80295783CE00D67D79 /* CustomTimer.swift in Sources */,
+				4B7AE5AD296B46230060AD41 /* CustomLabel.swift in Sources */,
+				4B7AE5A5296B42160060AD41 /* HomeView.swift in Sources */,
 				4C30F0A829391842002C3068 /* SelectDateViewController.swift in Sources */,
 				4BCB961F2956602700B15A58 /* HomeViewModelProtocols.swift in Sources */,
 				4C30F0A629390FC6002C3068 /* ServiceCollectionViewCell.swift in Sources */,
 				4BCB961D29565FF400B15A58 /* HomeViewModel.swift in Sources */,
 				4C55034929379F3600699589 /* HomeViewController.swift in Sources */,
 				4B20FF97295697DB0038955D /* ServiceModel.swift in Sources */,
+				4B15571C296B746C001C8C7F /* CustomImageView.swift in Sources */,
+				4B94CE79296B50C500144E87 /* CustomColors.swift in Sources */,
+				4B15571E296B7B0D001C8C7F /* CustomButton.swift in Sources */,
+				4B94CE7D296B56B700144E87 /* LastServiceView.swift in Sources */,
+				4B94CE7B296B52F700144E87 /* CustomDividerView.swift in Sources */,
 				4C55034529379F3600699589 /* AppDelegate.swift in Sources */,
 				4B5F6C902969C54B00F1D14B /* DescriptionModel.swift in Sources */,
 				4C5503592937D32A00699589 /* NovoServicoViewController.swift in Sources */,
 				4BCB96222956768300B15A58 /* DateManager.swift in Sources */,
 				4C55034729379F3600699589 /* SceneDelegate.swift in Sources */,
 				4B20FF99295697F20038955D /* ServiceKeys.swift in Sources */,
+				4B94CE76296B4D7700144E87 /* DescriptionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
