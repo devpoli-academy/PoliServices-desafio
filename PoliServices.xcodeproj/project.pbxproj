@@ -234,11 +234,11 @@
 		4C55034329379F3600699589 /* PoliServices */ = {
 			isa = PBXGroup;
 			children = (
-				4B7AE5A9296B460B0060AD41 /* Infrastructure */,
 				4BCB961B29565FC400B15A58 /* AppDelegate */,
 				4BCB961629565F2800B15A58 /* Scenes */,
 				4BCB96202956767900B15A58 /* DateManager */,
 				4B6F4B7E295783BB00D67D79 /* CustomTImer */,
+				4B7AE5A9296B460B0060AD41 /* Infrastructure */,
 				4C55034A29379F3600699589 /* Main.storyboard */,
 				4C55034D29379F3900699589 /* Assets.xcassets */,
 				4C55034F29379F3900699589 /* LaunchScreen.storyboard */,
@@ -495,7 +495,6 @@
 				INFOPLIST_KEY_CFBundleDisplayName = "Poli Services";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
@@ -529,7 +528,6 @@
 				INFOPLIST_KEY_CFBundleDisplayName = "Poli Services";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;

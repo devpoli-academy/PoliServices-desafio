@@ -28,13 +28,6 @@ class HomeViewController: UIViewController {
         return viewModel
     }()
     
-    @IBOutlet weak var dateLabel: UILabel!
-    @IBOutlet weak var descriptionLabel: UILabel!
-    @IBOutlet weak var lastServiceView: UIView!
-    @IBOutlet weak var serviceNameLabel: UILabel!
-    @IBOutlet weak var serviceDateLabel: UILabel!
-    @IBOutlet weak var novoBtn: UIButton!
-
     override func loadView() {
 
         view = homeView
@@ -79,12 +72,11 @@ class HomeViewController: UIViewController {
     
     private func didTapNewServiceButton() {
         
-        performSegue(withIdentifier: "showNewService", sender: nil)
-    }
-    
-    @IBAction func onRequestNewServiceDidTap(_ sender: Any) {
+        let selectServiceViewController = SelectServiceViewController()
+        let selectServiceNavigationController = UINavigationController(rootViewController: selectServiceViewController)
+        selectServiceNavigationController.modalPresentationStyle = .fullScreen
         
-        performSegue(withIdentifier: "showNewService", sender: nil)
+        show(selectServiceNavigationController, sender: self)
     }
 }
 

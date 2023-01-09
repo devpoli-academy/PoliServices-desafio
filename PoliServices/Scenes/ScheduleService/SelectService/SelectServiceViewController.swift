@@ -17,8 +17,6 @@ class SelectServiceViewController: UIViewController {
         return view
     }()
     
-    @IBOutlet weak var collectionView: UICollectionView!
-
     var nome: String?
     
     override func loadView() {
@@ -49,15 +47,6 @@ class SelectServiceViewController: UIViewController {
         
         dismiss(animated: true)
     }
-
-    @IBAction func onCancelDidTap(_ sender: Any) {
-        dismiss(animated: true)
-    }
-
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        (segue.destination as! SelectDateViewController).servico = nome
-    }
 }
 
 extension SelectServiceViewController: UICollectionViewDelegate {
@@ -75,7 +64,10 @@ extension SelectServiceViewController: UICollectionViewDelegate {
             nome = "Feedback"
         }
         
-        performSegue(withIdentifier: "dataServico", sender: nil)
+        let selectDateViewController = SelectDateViewController()
+        selectDateViewController.servico = nome
+        
+        navigationController?.pushViewController(selectDateViewController, animated: true)
     }
 }
 

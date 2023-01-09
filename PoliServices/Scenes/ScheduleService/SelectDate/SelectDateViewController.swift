@@ -10,9 +10,6 @@ import UIKit
 class SelectDateViewController: UIViewController {
 
     private lazy var selectDateView = SelectDateView()
-    
-    @IBOutlet weak var datePicker: UIDatePicker!
-    @IBOutlet weak var salvar: UIBarButtonItem!
 
     var servico: String?
 
@@ -43,17 +40,6 @@ class SelectDateViewController: UIViewController {
     @objc private func didTapSaveButton() {
         
         UserDefaults.standard.set(selectDateView.timeIntervalSince1970,
-                                  forKey: ServiceKeys.serviceDate.rawValue)
-        
-        UserDefaults.standard.set(servico,
-                                  forKey: ServiceKeys.serviceName.rawValue)
-        
-        dismiss(animated: true)
-    }
-
-    @IBAction func clicou(_ sender: Any) {
-        
-        UserDefaults.standard.set(datePicker.date.timeIntervalSince1970,
                                   forKey: ServiceKeys.serviceDate.rawValue)
         
         UserDefaults.standard.set(servico,
