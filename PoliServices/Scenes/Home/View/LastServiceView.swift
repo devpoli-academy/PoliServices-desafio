@@ -2,6 +2,18 @@ import UIKit
 
 class LastServiceView: UIView {
     
+    var serviceNameText: String? {
+        didSet {
+            serviceNameLabel.text = serviceNameText
+        }
+    }
+    
+    var serviceDateText: String? {
+        didSet {
+            serviceDateLabel.text = serviceDateText
+        }
+    }
+    
     private lazy var nextServiceLabel = CustomLabel(text: "Próximo Serviço",
                                                     size: 16,
                                                     weight: .bold)
@@ -22,11 +34,11 @@ class LastServiceView: UIView {
                                                     weight: .bold,
                                                     textColor: .white)
     
-    private lazy var serviceDateTitleLabel = CustomLabel(text: "Nome do serviço",
+    private lazy var serviceDateTitleLabel = CustomLabel(text: "Data e hora",
                                                          size: 12,
                                                          textColor: .white)
     
-    private lazy var serviceDateLabel = CustomLabel(text: "Nome do serviço",
+    private lazy var serviceDateLabel = CustomLabel(text: "30/11 às 19h",
                                                     size: 12,
                                                     weight: .bold,
                                                     textColor: .white)

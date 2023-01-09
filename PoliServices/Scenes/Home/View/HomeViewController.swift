@@ -9,7 +9,16 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
-    private lazy var homeView = HomeView()
+    private lazy var homeView: HomeView = {
+        let view = HomeView()
+        
+        view.serviceButtonAction = { [unowned self] in
+            
+            self.didTapNewServiceButton()
+        }
+        
+        return view
+    }()
     
     private lazy var homeViewModel: HomeViewModelProtocol = {
         let viewModel = HomeViewModel()
@@ -50,11 +59,6 @@ class HomeViewController: UIViewController {
         configureDescriptionLabel()
         
         homeViewModel.startTimer()
-        
-        
-//        homeView.configureNewServiceButton()
-//        lastServiceView.alpha = 0
-//        novoBtn.alpha = 0
     }
     
     private func configureCurrentDate() {
@@ -73,6 +77,11 @@ class HomeViewController: UIViewController {
         }
     }
     
+    private func didTapNewServiceButton() {
+        
+        performSegue(withIdentifier: "showNewService", sender: nil)
+    }
+    
     @IBAction func onRequestNewServiceDidTap(_ sender: Any) {
         
         performSegue(withIdentifier: "showNewService", sender: nil)
@@ -83,41 +92,14 @@ extension HomeViewController: ScheduledServiceDelegate {
     
     func didGetScheduledService(service: ServiceModel) {
         
-        DispatchQueue.main.async { [weak self] in
-            
-            self?.homeView.removeNewServiceButton()
-            self?.homeView.configureLastServiceView()
-        }
+        homeView.serviceNameText = service.serviceName
+        homeView.serviceDateText = service.serviceDate
         
-//        DispatchQueue.main.async {
-//
-//            UIView.animate(withDuration: 0.3) {
-//                self.lastServiceView.alpha = 1
-//                self.lastServiceView.isHidden = false
-//
-//                self.novoBtn.alpha = 0
-//                self.novoBtn.isHidden = true
-//            }
-//        }
+        homeView.configureServiceView(hasService: true)
     }
     
     func noScheduledService() {
         
-        DispatchQueue.main.async { [weak self] in
-            
-            self?.homeView.removeLastServiceView()
-            self?.homeView.configureNewServiceButton()
-        }
-        
-//        DispatchQueue.main.async {
-//
-//            UIView.animate(withDuration: 0.3) {
-//                self.lastServiceView.alpha = 0
-//                self.lastServiceView.isHidden = true
-//
-//                self.novoBtn.alpha = 1
-//                self.novoBtn.isHidden = false
-//            }
-//        }
+        homeView.configureServiceView(hasService: false)
     }
 }

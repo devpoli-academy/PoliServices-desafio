@@ -14,6 +14,20 @@ class HomeView: UIView {
         }
     }
     
+    var serviceNameText: String? {
+        didSet {
+            lastServiceView.serviceNameText = serviceNameText
+        }
+    }
+    
+    var serviceDateText: String? {
+        didSet {
+            lastServiceView.serviceDateText = serviceDateText
+        }
+    }
+    
+    var serviceButtonAction: (() -> Void)?
+    
     private lazy var welcomeLabel = CustomLabel(text: "Bem-Vindo ao DevServices",
                                                 size: 32,
                                                 weight: .bold)
@@ -27,9 +41,36 @@ class HomeView: UIView {
     
     private lazy var dividerView = CustomDividerView()
     
-    private lazy var lastServiceView = LastServiceView()
+    private lazy var serviceStackView: UIStackView = {
+        let stackView = UIStackView()
+        
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.axis = .vertical
+        stackView.spacing = 22
+        stackView.distribution = .fill
+        
+        return stackView
+    }()
     
-    private lazy var newServiceButton = CustomButton(title: "Solicitar novo serviço")
+    private lazy var lastServiceView: LastServiceView = {
+        let view = LastServiceView()
+        
+        view.alpha = 0
+        
+        return view
+    }()
+    
+    private lazy var newServiceButton: CustomButton = {
+        let button = CustomButton(title: "Solicitar novo serviço")
+        
+        button.alpha = 0
+        button.action = { [unowned self] in
+            
+            self.serviceButtonAction?()
+        }
+        
+        return button
+    }()
     
     override init(frame: CGRect) {
         super.init(frame: .zero)
@@ -51,13 +92,7 @@ class HomeView: UIView {
         
         configureDividerView()
         
-        
-        
-        
-//        configureLastServiceView()
-//        configureNewServiceButton()
-        
-        
+        configureServiceStackView()
         
         additionalConfiguration()
     }
@@ -109,35 +144,30 @@ class HomeView: UIView {
         backgroundColor = .mainBackground
     }
     
-    func configureLastServiceView() {
+    private func configureServiceStackView() {
         
-        addSubview(lastServiceView)
+        addSubview(serviceStackView)
+        serviceStackView.addArrangedSubview(lastServiceView)
+        serviceStackView.addArrangedSubview(newServiceButton)
         
         NSLayoutConstraint.activate([
-            lastServiceView.topAnchor.constraint(equalTo: dividerView.bottomAnchor, constant: 32),
-            lastServiceView.leadingAnchor.constraint(equalTo: welcomeLabel.leadingAnchor),
-            lastServiceView.trailingAnchor.constraint(equalTo: welcomeLabel.trailingAnchor)
+            serviceStackView.topAnchor.constraint(equalTo: dividerView.bottomAnchor, constant: 32),
+            serviceStackView.leadingAnchor.constraint(equalTo: welcomeLabel.leadingAnchor),
+            serviceStackView.trailingAnchor.constraint(equalTo: welcomeLabel.trailingAnchor)
         ])
     }
     
-    func removeLastServiceView() {
+    func configureServiceView(hasService: Bool) {
         
-        lastServiceView.removeFromSuperview()
-    }
-    
-    func configureNewServiceButton() {
-        
-        addSubview(newServiceButton)
-        
-        NSLayoutConstraint.activate([
-            newServiceButton.topAnchor.constraint(equalTo: dividerView.bottomAnchor, constant: 32),
-            newServiceButton.leadingAnchor.constraint(equalTo: welcomeLabel.leadingAnchor),
-            newServiceButton.trailingAnchor.constraint(equalTo: welcomeLabel.trailingAnchor)
-        ])
-    }
-    
-    func removeNewServiceButton() {
-        
-        newServiceButton.removeFromSuperview()
+        DispatchQueue.main.async { [weak self] in
+            
+            UIView.animate(withDuration: 0.3) {
+                self?.lastServiceView.alpha = hasService ? 1 : 0
+                self?.lastServiceView.isHidden = hasService ? false : true
+
+                self?.newServiceButton.alpha = hasService ? 0 : 1
+                self?.newServiceButton.isHidden = hasService ? true : false
+            }
+        }
     }
 }
