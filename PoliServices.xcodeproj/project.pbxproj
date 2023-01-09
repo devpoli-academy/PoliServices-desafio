@@ -22,7 +22,9 @@
 		4BCB961D29565FF400B15A58 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCB961C29565FF400B15A58 /* HomeViewModel.swift */; };
 		4BCB961F2956602700B15A58 /* HomeViewModelProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCB961E2956602700B15A58 /* HomeViewModelProtocols.swift */; };
 		4BCB96222956768300B15A58 /* DateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCB96212956768300B15A58 /* DateManager.swift */; };
-		4C30F0A629390FC6002C3068 /* ServiceCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C30F0A529390FC6002C3068 /* ServiceCollectionViewCell.swift */; };
+		4BF27F24296BA24E0097637D /* SelectDateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF27F23296BA24E0097637D /* SelectDateView.swift */; };
+		4BF27F26296BA2A00097637D /* SelectServiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF27F25296BA2A00097637D /* SelectServiceView.swift */; };
+		4BF27F28296BA9ED0097637D /* ServiceCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF27F27296BA9ED0097637D /* ServiceCollectionViewCell.swift */; };
 		4C30F0A829391842002C3068 /* SelectDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C30F0A729391842002C3068 /* SelectDateViewController.swift */; };
 		4C55034529379F3600699589 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C55034429379F3600699589 /* AppDelegate.swift */; };
 		4C55034729379F3600699589 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C55034629379F3600699589 /* SceneDelegate.swift */; };
@@ -30,7 +32,7 @@
 		4C55034C29379F3600699589 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C55034A29379F3600699589 /* Main.storyboard */; };
 		4C55034E29379F3900699589 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C55034D29379F3900699589 /* Assets.xcassets */; };
 		4C55035129379F3900699589 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C55034F29379F3900699589 /* LaunchScreen.storyboard */; };
-		4C5503592937D32A00699589 /* NovoServicoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5503582937D32A00699589 /* NovoServicoViewController.swift */; };
+		4C5503592937D32A00699589 /* SelectServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5503582937D32A00699589 /* SelectServiceViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,7 +51,9 @@
 		4BCB961C29565FF400B15A58 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		4BCB961E2956602700B15A58 /* HomeViewModelProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelProtocols.swift; sourceTree = "<group>"; };
 		4BCB96212956768300B15A58 /* DateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateManager.swift; sourceTree = "<group>"; };
-		4C30F0A529390FC6002C3068 /* ServiceCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceCollectionViewCell.swift; sourceTree = "<group>"; };
+		4BF27F23296BA24E0097637D /* SelectDateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectDateView.swift; sourceTree = "<group>"; };
+		4BF27F25296BA2A00097637D /* SelectServiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectServiceView.swift; sourceTree = "<group>"; };
+		4BF27F27296BA9ED0097637D /* ServiceCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceCollectionViewCell.swift; sourceTree = "<group>"; };
 		4C30F0A729391842002C3068 /* SelectDateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectDateViewController.swift; sourceTree = "<group>"; };
 		4C55034129379F3600699589 /* PoliServices.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PoliServices.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C55034429379F3600699589 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -59,7 +63,7 @@
 		4C55034D29379F3900699589 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4C55035029379F3900699589 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4C55035229379F3900699589 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4C5503582937D32A00699589 /* NovoServicoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NovoServicoViewController.swift; sourceTree = "<group>"; };
+		4C5503582937D32A00699589 /* SelectServiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectServiceViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				4C30F0A729391842002C3068 /* SelectDateViewController.swift */,
+				4BF27F23296BA24E0097637D /* SelectDateView.swift */,
 			);
 			path = SelectDate;
 			sourceTree = "<group>";
@@ -186,8 +191,9 @@
 		4BCB961A29565F8B00B15A58 /* SelectService */ = {
 			isa = PBXGroup;
 			children = (
-				4C5503582937D32A00699589 /* NovoServicoViewController.swift */,
-				4C30F0A529390FC6002C3068 /* ServiceCollectionViewCell.swift */,
+				4C5503582937D32A00699589 /* SelectServiceViewController.swift */,
+				4BF27F25296BA2A00097637D /* SelectServiceView.swift */,
+				4BF27F27296BA9ED0097637D /* ServiceCollectionViewCell.swift */,
 			);
 			path = SelectService;
 			sourceTree = "<group>";
@@ -313,23 +319,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4BF27F24296BA24E0097637D /* SelectDateView.swift in Sources */,
 				4B6F4B80295783CE00D67D79 /* CustomTimer.swift in Sources */,
 				4B7AE5AD296B46230060AD41 /* CustomLabel.swift in Sources */,
 				4B7AE5A5296B42160060AD41 /* HomeView.swift in Sources */,
 				4C30F0A829391842002C3068 /* SelectDateViewController.swift in Sources */,
 				4BCB961F2956602700B15A58 /* HomeViewModelProtocols.swift in Sources */,
-				4C30F0A629390FC6002C3068 /* ServiceCollectionViewCell.swift in Sources */,
 				4BCB961D29565FF400B15A58 /* HomeViewModel.swift in Sources */,
 				4C55034929379F3600699589 /* HomeViewController.swift in Sources */,
 				4B20FF97295697DB0038955D /* ServiceModel.swift in Sources */,
+				4BF27F28296BA9ED0097637D /* ServiceCollectionViewCell.swift in Sources */,
 				4B15571C296B746C001C8C7F /* CustomImageView.swift in Sources */,
 				4B94CE79296B50C500144E87 /* CustomColors.swift in Sources */,
 				4B15571E296B7B0D001C8C7F /* CustomButton.swift in Sources */,
 				4B94CE7D296B56B700144E87 /* LastServiceView.swift in Sources */,
 				4B94CE7B296B52F700144E87 /* CustomDividerView.swift in Sources */,
 				4C55034529379F3600699589 /* AppDelegate.swift in Sources */,
+				4BF27F26296BA2A00097637D /* SelectServiceView.swift in Sources */,
 				4B5F6C902969C54B00F1D14B /* DescriptionModel.swift in Sources */,
-				4C5503592937D32A00699589 /* NovoServicoViewController.swift in Sources */,
+				4C5503592937D32A00699589 /* SelectServiceViewController.swift in Sources */,
 				4BCB96222956768300B15A58 /* DateManager.swift in Sources */,
 				4C55034729379F3600699589 /* SceneDelegate.swift in Sources */,
 				4B20FF99295697F20038955D /* ServiceKeys.swift in Sources */,

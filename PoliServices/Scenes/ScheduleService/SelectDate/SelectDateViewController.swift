@@ -5,7 +5,6 @@
 //  Created by Rodrigo Policante Martins on 01/12/22.
 //
 
-import Foundation
 import UIKit
 
 class SelectDateViewController: UIViewController {

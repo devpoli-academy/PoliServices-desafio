@@ -3,7 +3,7 @@ import UIKit
 class CustomImageView: UIImageView {
     
     init(
-        systemImageName: String,
+        systemImageName: String = "",
         contentMode: UIView.ContentMode = .scaleAspectFit,
         imageColor: UIColor = .white
     ) {
