@@ -19,8 +19,20 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
         window = UIWindow(windowScene: windowScene)
-        window?.rootViewController = UINavigationController(rootViewController: HomeViewController())
+        window?.rootViewController = homeNavigationControllerFactory()
         window?.makeKeyAndVisible()
+    }
+    
+    private func homeNavigationControllerFactory() -> UINavigationController {
+        
+        let homeViewModel = HomeViewModel()
+        
+        let homeViewController = HomeViewController(viewModel: homeViewModel)
+        homeViewModel.scheduledServiceDelegate = homeViewController
+        
+        let homeNavigationController = UINavigationController(rootViewController: homeViewController)
+        
+        return homeNavigationController
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
@@ -50,7 +62,4 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to save data, release shared resources, and store enough scene-specific state information
         // to restore the scene back to its current state.
     }
-
-
 }
-

@@ -9,6 +9,18 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
+    private let viewModel: HomeViewModelProtocol
+    
+    init(viewModel: HomeViewModelProtocol) {
+        self.viewModel = viewModel
+        
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     private lazy var homeView: HomeView = {
         let view = HomeView()
         
@@ -20,13 +32,13 @@ class HomeViewController: UIViewController {
         return view
     }()
     
-    private lazy var homeViewModel: HomeViewModelProtocol = {
-        let viewModel = HomeViewModel()
-        
-        viewModel.scheduledServiceDelegate = self
-
-        return viewModel
-    }()
+//    private lazy var homeViewModel: HomeViewModelProtocol = {
+//        let viewModel = HomeViewModel()
+//
+//        viewModel.scheduledServiceDelegate = self
+//
+//        return viewModel
+//    }()
     
     override func loadView() {
 
@@ -42,7 +54,7 @@ class HomeViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        homeViewModel.getScheduledService()
+        viewModel.getScheduledService()
     }
     
     private func configureView() {
@@ -51,12 +63,12 @@ class HomeViewController: UIViewController {
         
         configureDescriptionLabel()
         
-        homeViewModel.startTimer()
+        viewModel.startTimer()
     }
     
     private func configureCurrentDate() {
         
-        homeViewModel.getCurrentDate { [unowned self] currentDate in
+        viewModel.getCurrentDate { [unowned self] currentDate in
             
             self.homeView.dateLabelText = currentDate
         }
@@ -64,7 +76,7 @@ class HomeViewController: UIViewController {
     
     private func configureDescriptionLabel() {
         
-        homeViewModel.getDescriptionLabel { [unowned self] descriptionText in
+        viewModel.getDescriptionLabel { [unowned self] descriptionText in
             
             self.homeView.descriptionText = descriptionText
         }
