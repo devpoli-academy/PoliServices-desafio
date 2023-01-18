@@ -6,7 +6,9 @@ class ServiceCollectionViewCell: UICollectionViewCell {
     
     var serviceImageName: String? {
         didSet {
-            serviceImageView.image = UIImage(systemName: serviceImageName ?? "")
+            
+            guard let serviceImageName = serviceImageName else { return }
+            serviceImageView.image = UIImage(named: serviceImageName)?.withRenderingMode(.alwaysTemplate)
         }
     }
     

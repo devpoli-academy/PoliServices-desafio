@@ -96,7 +96,7 @@ class LastServiceView: UIView {
         
         NSLayoutConstraint.activate([
             serviceBookImageView.bottomAnchor.constraint(equalTo: innerView.bottomAnchor, constant: -4),
-            serviceBookImageView.trailingAnchor.constraint(equalTo: innerView.trailingAnchor, constant: -4),
+            serviceBookImageView.trailingAnchor.constraint(equalTo: innerView.trailingAnchor, constant: -10),
             serviceBookImageView.heightAnchor.constraint(equalTo: innerView.heightAnchor, multiplier: 0.5),
             serviceBookImageView.widthAnchor.constraint(equalTo: innerView.heightAnchor, multiplier: 0.5)
         ])

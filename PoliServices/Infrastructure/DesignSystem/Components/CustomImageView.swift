@@ -24,7 +24,7 @@ class CustomImageView: UIImageView {
         
         translatesAutoresizingMaskIntoConstraints = false
         
-        self.image = UIImage(systemName: systemImageName)
+        self.image = UIImage(named: systemImageName)?.withRenderingMode(.alwaysTemplate)
         
         self.contentMode = contentMode
         
