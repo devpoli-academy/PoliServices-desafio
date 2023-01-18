@@ -7,7 +7,7 @@ class CustomLabel: UILabel {
         size: CGFloat = 14,
         weight: UIFont.Weight = .regular,
         alignment: NSTextAlignment = .left,
-        textColor: UIColor = .label
+        textColor: UIColor = .mainLabel
     ) {
         super.init(frame: .zero)
         
