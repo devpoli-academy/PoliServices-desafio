@@ -2,17 +2,14 @@ import Foundation
 
 protocol DateManagerProtocol {
     
-    func getcurrentDate(onComplete: (String) -> Void)
+    func getCurrentDate(onComplete: (String) -> Void)
 }
 
 class DateManager: DateManagerProtocol {
 
-    func getcurrentDate(onComplete: (String) -> Void) {
-        
-        let formattedCurrentDate = Date().formatted(
-            date: .long,
-            time: .omitted
-        )
+    func getCurrentDate(onComplete: (String) -> Void) {
+                
+        let formattedCurrentDate = Date().getStandardCurrentDateString()
         
         onComplete(formattedCurrentDate)
     }

@@ -9,4 +9,13 @@ extension Date {
         
         return dateFormatter.string(from: self)
     }
+    
+    func getStandardCurrentDateString() -> String {
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .long
+        dateFormatter.locale = Locale(identifier: "pt_BR")
+        
+        return dateFormatter.string(from: self)
+    }
 }

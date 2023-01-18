@@ -10,7 +10,7 @@ class HomeViewModel: HomeViewModelProtocol {
     
     func getCurrentDate(_ completion: (String) -> Void) {
         
-        dateManager.getcurrentDate { date in
+        dateManager.getCurrentDate { date in
             
             completion(date)
         }
