@@ -49,13 +49,8 @@ extension HomeViewModel: ScheduledServiceProtocol {
         if hasService {
             guard let serviceName = UserDefaults.standard.string(forKey: ServiceKeys.serviceName.rawValue) else { return }
 
-            let serviceDate = serviceDate.formatted(
-                date: .numeric,
-                time: .shortened
-            )
-            
             let service = ServiceModel(
-                serviceDate: serviceDate,
+                serviceDate: serviceDate.toStandardString(),
                 serviceName: serviceName
             )
             

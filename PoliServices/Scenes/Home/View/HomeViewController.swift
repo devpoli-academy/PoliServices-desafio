@@ -32,14 +32,6 @@ class HomeViewController: UIViewController {
         return view
     }()
     
-//    private lazy var homeViewModel: HomeViewModelProtocol = {
-//        let viewModel = HomeViewModel()
-//
-//        viewModel.scheduledServiceDelegate = self
-//
-//        return viewModel
-//    }()
-    
     override func loadView() {
 
         view = homeView

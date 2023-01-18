@@ -41,6 +41,7 @@
 		60CE81BC29777EB1009667C5 /* SelectDateViewModelProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60CE81BB29777EB1009667C5 /* SelectDateViewModelProtocols.swift */; };
 		60CE81BE29777EC2009667C5 /* SelectDateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60CE81BD29777EC2009667C5 /* SelectDateViewModel.swift */; };
 		60CE81C0297784D1009667C5 /* ScheduledServiceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60CE81BF297784D1009667C5 /* ScheduledServiceModel.swift */; };
+		60CE81C329778B78009667C5 /* String+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60CE81C229778B78009667C5 /* String+Date.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +81,7 @@
 		60CE81BB29777EB1009667C5 /* SelectDateViewModelProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectDateViewModelProtocols.swift; sourceTree = "<group>"; };
 		60CE81BD29777EC2009667C5 /* SelectDateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectDateViewModel.swift; sourceTree = "<group>"; };
 		60CE81BF297784D1009667C5 /* ScheduledServiceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduledServiceModel.swift; sourceTree = "<group>"; };
+		60CE81C229778B78009667C5 /* String+Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Date.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +136,7 @@
 		4B7AE5A9296B460B0060AD41 /* Infrastructure */ = {
 			isa = PBXGroup;
 			children = (
+				60CE81C129778B5F009667C5 /* Extensions */,
 				4B7AE5AA296B46130060AD41 /* DesignSystem */,
 			);
 			path = Infrastructure;
@@ -335,6 +338,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		60CE81C129778B5F009667C5 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				60CE81C229778B78009667C5 /* String+Date.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -416,6 +427,7 @@
 				4C30F0A829391842002C3068 /* SelectDateViewController.swift in Sources */,
 				4BCB961F2956602700B15A58 /* HomeViewModelProtocols.swift in Sources */,
 				60CE81C0297784D1009667C5 /* ScheduledServiceModel.swift in Sources */,
+				60CE81C329778B78009667C5 /* String+Date.swift in Sources */,
 				4BCB961D29565FF400B15A58 /* HomeViewModel.swift in Sources */,
 				60CE81B529776FF0009667C5 /* SystemImageName.swift in Sources */,
 				4C55034929379F3600699589 /* HomeViewController.swift in Sources */,
