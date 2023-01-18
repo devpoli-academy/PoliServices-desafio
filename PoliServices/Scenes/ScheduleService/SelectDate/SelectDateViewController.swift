@@ -11,7 +11,7 @@ class SelectDateViewController: UIViewController {
 
     private lazy var selectDateView = SelectDateView()
 
-    var servico: String?
+    var serviceName: String?
 
     override func loadView() {
 
@@ -42,7 +42,7 @@ class SelectDateViewController: UIViewController {
         UserDefaults.standard.set(selectDateView.timeIntervalSince1970,
                                   forKey: ServiceKeys.serviceDate.rawValue)
         
-        UserDefaults.standard.set(servico,
+        UserDefaults.standard.set(serviceName,
                                   forKey: ServiceKeys.serviceName.rawValue)
         
         dismiss(animated: true)

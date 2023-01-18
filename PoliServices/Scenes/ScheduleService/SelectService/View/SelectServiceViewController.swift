@@ -9,16 +9,25 @@ import UIKit
 
 class SelectServiceViewController: UIViewController {
 
+    private let viewModel: SelectServiceViewModelProtocol
+    
+    init(viewModel: SelectServiceViewModelProtocol) {
+        self.viewModel = viewModel
+        
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     private lazy var selectServiceView: SelectServiceView = {
         let view = SelectServiceView()
-        
         view.configureCollectionView(delegate: self, dataSource: self)
-        
+
         return view
     }()
-    
-    var nome: String?
-    
+
     override func loadView() {
         
         view = selectServiceView
@@ -28,6 +37,8 @@ class SelectServiceViewController: UIViewController {
         super.viewDidLoad()
         
         configureNavigationBar()
+        
+        viewModel.getServices()
     }
     
     private func configureNavigationBar() {
@@ -54,18 +65,14 @@ extension SelectServiceViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView,
                         didSelectItemAt indexPath: IndexPath) {
         
-        if indexPath.row == 0 {
-            nome = "Código"
-        } else if indexPath.row == 1 {
-            nome = "Carreira"
-        } else if indexPath.row == 2 {
-            nome = "Entrevista"
-        } else if indexPath.row == 3 {
-            nome = "Feedback"
+        let cell = getServiceCollectionViewCell(from: collectionView, indexPath: indexPath)
+        
+        guard let serviceName = cell.serviceNameText else {
+            fatalError("'serviceName' in ServiceCollectionViewCell was not configured before navigating to next screen")
         }
         
         let selectDateViewController = SelectDateViewController()
-        selectDateViewController.servico = nome
+        selectDateViewController.serviceName = serviceName
         
         navigationController?.pushViewController(selectDateViewController, animated: true)
     }
@@ -76,49 +83,13 @@ extension SelectServiceViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView,
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ServiceCollectionViewCell.identifier,
-                                                      for: indexPath) as! ServiceCollectionViewCell
-
-        switch indexPath.row {
-            
-        case 0:
-            cell.serviceNameText = "Código"
-            cell.serviceImageName = "pencil.slash"
-            cell.serviceImageColor = .cyan
-            
-        case 1:
-            cell.serviceNameText = "Carreira"
-            cell.serviceImageName = "graduationcap.circle.fill"
-            cell.serviceImageColor = .green
-            
-        case 2:
-            cell.serviceNameText = "Entrevista"
-            cell.serviceImageName = "books.vertical.fill"
-            cell.serviceImageColor = .magenta
-            
-        case 3:
-            cell.serviceNameText = "Feedback"
-            cell.serviceImageName = "scribble.variable"
-            cell.serviceImageColor = .brown
-            
-        default:
-            cell.serviceNameText = ""
-            cell.serviceImageName = ""
-            cell.serviceImageColor = .black
-        }
-        
-        return cell
-    }
-    
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        
-        return 1
+        return getServiceCollectionViewCell(from: collectionView, indexPath: indexPath)
     }
 
     func collectionView(_ collectionView: UICollectionView,
                         numberOfItemsInSection section: Int) -> Int {
         
-        return 4
+        return viewModel.services.count
     }
 }
 
@@ -129,5 +100,30 @@ extension SelectServiceViewController: UICollectionViewDelegateFlowLayout {
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         return CGSize(width: 150, height: 150)
+    }
+}
+
+extension SelectServiceViewController: SelectServiceViewDelegate {
+    
+    func didGetSelectServices() {
+        
+        selectServiceView.updateSelectServicesCollectionView()
+    }
+}
+
+extension SelectServiceViewController {
+    
+    func getServiceCollectionViewCell(from collectionView: UICollectionView, indexPath: IndexPath) -> ServiceCollectionViewCell {
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ServiceCollectionViewCell.identifier,
+                                                      for: indexPath)
+        
+        let selectService = viewModel.services[indexPath.row]
+        
+        guard let serviceCollectionViewCell = cell as? ServiceCollectionViewCell else { return ServiceCollectionViewCell() }
+        
+        serviceCollectionViewCell.configure(with: selectService)
+        
+        return serviceCollectionViewCell
     }
 }

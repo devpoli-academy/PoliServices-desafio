@@ -56,4 +56,9 @@ class SelectServiceView: UIView {
         selectServiceCollectionView.delegate = delegate
         selectServiceCollectionView.dataSource = dataSource
     }
+    
+    func updateSelectServicesCollectionView() {
+        
+        selectServiceCollectionView.reloadData()
+    }
 }

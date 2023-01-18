@@ -24,10 +24,12 @@ class ServiceCollectionViewCell: UICollectionViewCell {
     
     private lazy var serviceImageView = CustomImageView()
     
-    private lazy var serviceNameLabel = CustomLabel(text: "Service Name",
-                                                    size: 20,
-                                                    weight: .bold,
-                                                    alignment: .center)
+    private lazy var serviceNameLabel = CustomLabel(
+        text: "Service Name",
+        size: 20,
+        weight: .bold,
+        alignment: .center
+    )
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -66,6 +68,11 @@ class ServiceCollectionViewCell: UICollectionViewCell {
         layer.cornerRadius = 8
         clipsToBounds = true
     }
+    
+    func configure(with selectService: SelectServicesModel) {
+        
+        serviceNameText = selectService.name
+        serviceImageName = selectService.systemImageName.rawValue
+        serviceImageColor = selectService.imageColor.toUIColor()
+    }
 }
-
-

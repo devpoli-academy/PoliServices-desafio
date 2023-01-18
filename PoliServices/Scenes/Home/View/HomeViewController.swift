@@ -72,11 +72,23 @@ class HomeViewController: UIViewController {
     
     private func didTapNewServiceButton() {
         
-        let selectServiceViewController = SelectServiceViewController()
+        let selectServiceNavigationController = selectServiceNavigationControllerFactory()
+        
+        show(selectServiceNavigationController, sender: self)
+    }
+    
+    func selectServiceNavigationControllerFactory() -> UINavigationController {
+        
+        let selectServiceViewModel = SelectServiceViewModel()
+        
+        let selectServiceViewController = SelectServiceViewController(viewModel: selectServiceViewModel)
+        
+        selectServiceViewModel.delegate = selectServiceViewController
+        
         let selectServiceNavigationController = UINavigationController(rootViewController: selectServiceViewController)
         selectServiceNavigationController.modalPresentationStyle = .fullScreen
         
-        show(selectServiceNavigationController, sender: self)
+        return selectServiceNavigationController
     }
 }
 
