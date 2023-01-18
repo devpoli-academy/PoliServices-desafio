@@ -16,7 +16,7 @@ class CustomDividerView: UIView {
     
     override var intrinsicContentSize: CGSize {
         
-        let width = window?.windowScene?.screen.bounds.size.width ?? 100
+        let width = UIScreen.main.bounds.size.width
         
         return CGSize(width: width - 110, height: 1)
     }
