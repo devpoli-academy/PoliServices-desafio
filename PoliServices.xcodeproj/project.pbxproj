@@ -27,7 +27,6 @@
 		4BF27F28296BA9ED0097637D /* ServiceCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF27F27296BA9ED0097637D /* ServiceCollectionViewCell.swift */; };
 		4C30F0A829391842002C3068 /* SelectDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C30F0A729391842002C3068 /* SelectDateViewController.swift */; };
 		4C55034529379F3600699589 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C55034429379F3600699589 /* AppDelegate.swift */; };
-		4C55034729379F3600699589 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C55034629379F3600699589 /* SceneDelegate.swift */; };
 		4C55034929379F3600699589 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C55034829379F3600699589 /* HomeViewController.swift */; };
 		4C55034E29379F3900699589 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C55034D29379F3900699589 /* Assets.xcassets */; };
 		4C55035129379F3900699589 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C55034F29379F3900699589 /* LaunchScreen.storyboard */; };
@@ -41,7 +40,7 @@
 		60CE81BC29777EB1009667C5 /* SelectDateViewModelProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60CE81BB29777EB1009667C5 /* SelectDateViewModelProtocols.swift */; };
 		60CE81BE29777EC2009667C5 /* SelectDateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60CE81BD29777EC2009667C5 /* SelectDateViewModel.swift */; };
 		60CE81C0297784D1009667C5 /* ScheduledServiceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60CE81BF297784D1009667C5 /* ScheduledServiceModel.swift */; };
-		60CE81C329778B78009667C5 /* String+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60CE81C229778B78009667C5 /* String+Date.swift */; };
+		60CE81C329778B78009667C5 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60CE81C229778B78009667C5 /* Date+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,7 +65,6 @@
 		4C30F0A729391842002C3068 /* SelectDateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectDateViewController.swift; sourceTree = "<group>"; };
 		4C55034129379F3600699589 /* PoliServices.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PoliServices.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C55034429379F3600699589 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4C55034629379F3600699589 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		4C55034829379F3600699589 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		4C55034D29379F3900699589 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4C55035029379F3900699589 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -81,7 +79,7 @@
 		60CE81BB29777EB1009667C5 /* SelectDateViewModelProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectDateViewModelProtocols.swift; sourceTree = "<group>"; };
 		60CE81BD29777EC2009667C5 /* SelectDateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectDateViewModel.swift; sourceTree = "<group>"; };
 		60CE81BF297784D1009667C5 /* ScheduledServiceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduledServiceModel.swift; sourceTree = "<group>"; };
-		60CE81C229778B78009667C5 /* String+Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Date.swift"; sourceTree = "<group>"; };
+		60CE81C229778B78009667C5 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -225,7 +223,6 @@
 			isa = PBXGroup;
 			children = (
 				4C55034429379F3600699589 /* AppDelegate.swift */,
-				4C55034629379F3600699589 /* SceneDelegate.swift */,
 			);
 			path = AppDelegate;
 			sourceTree = "<group>";
@@ -341,7 +338,7 @@
 		60CE81C129778B5F009667C5 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				60CE81C229778B78009667C5 /* String+Date.swift */,
+				60CE81C229778B78009667C5 /* Date+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -427,7 +424,7 @@
 				4C30F0A829391842002C3068 /* SelectDateViewController.swift in Sources */,
 				4BCB961F2956602700B15A58 /* HomeViewModelProtocols.swift in Sources */,
 				60CE81C0297784D1009667C5 /* ScheduledServiceModel.swift in Sources */,
-				60CE81C329778B78009667C5 /* String+Date.swift in Sources */,
+				60CE81C329778B78009667C5 /* Date+Extension.swift in Sources */,
 				4BCB961D29565FF400B15A58 /* HomeViewModel.swift in Sources */,
 				60CE81B529776FF0009667C5 /* SystemImageName.swift in Sources */,
 				4C55034929379F3600699589 /* HomeViewController.swift in Sources */,
@@ -446,7 +443,6 @@
 				4B5F6C902969C54B00F1D14B /* DescriptionModel.swift in Sources */,
 				4C5503592937D32A00699589 /* SelectServiceViewController.swift in Sources */,
 				4BCB96222956768300B15A58 /* DateManager.swift in Sources */,
-				4C55034729379F3600699589 /* SceneDelegate.swift in Sources */,
 				4B20FF99295697F20038955D /* ServiceKeys.swift in Sources */,
 				4B94CE76296B4D7700144E87 /* DescriptionView.swift in Sources */,
 				60CE81AD297761B7009667C5 /* SelectServiceViewModelProtocols.swift in Sources */,
