@@ -71,9 +71,8 @@ extension SelectServiceViewController: UICollectionViewDelegate {
             fatalError("'serviceName' in ServiceCollectionViewCell was not configured before navigating to next screen")
         }
         
-        let selectDateViewController = SelectDateViewController()
-        selectDateViewController.serviceName = serviceName
-        
+        let selectDateViewController = selectDateViewControllerFactory(serviceName: serviceName)
+
         navigationController?.pushViewController(selectDateViewController, animated: true)
     }
 }
@@ -113,6 +112,16 @@ extension SelectServiceViewController: SelectServiceViewDelegate {
 
 extension SelectServiceViewController {
     
+    func selectDateViewControllerFactory(serviceName: String) -> UIViewController {
+        
+        let selectDateViewModel = SelectDateViewModel(serviceName: serviceName)
+        
+        let selectDateViewController = SelectDateViewController(viewModel: selectDateViewModel)
+        selectDateViewModel.delegate = selectDateViewController
+        
+        return selectDateViewController
+    }
+    
     func getServiceCollectionViewCell(from collectionView: UICollectionView, indexPath: IndexPath) -> ServiceCollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ServiceCollectionViewCell.identifier,
@@ -121,7 +130,6 @@ extension SelectServiceViewController {
         let selectService = viewModel.services[indexPath.row]
         
         guard let serviceCollectionViewCell = cell as? ServiceCollectionViewCell else { return ServiceCollectionViewCell() }
-        
         serviceCollectionViewCell.configure(with: selectService)
         
         return serviceCollectionViewCell

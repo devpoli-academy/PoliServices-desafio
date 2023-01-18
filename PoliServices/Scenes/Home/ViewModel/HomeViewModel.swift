@@ -60,7 +60,7 @@ extension HomeViewModel: ScheduledServiceProtocol {
             )
             
             scheduledServiceDelegate?.didGetScheduledService(service: service)
-        } else{
+        } else {
             UserDefaults.standard.removeObject(forKey: ServiceKeys.serviceDate.rawValue)
             UserDefaults.standard.removeObject(forKey: ServiceKeys.serviceName.rawValue)
             

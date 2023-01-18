@@ -8,10 +8,20 @@
 import UIKit
 
 class SelectDateViewController: UIViewController {
-
+    
+    private let viewModel: SelectDateViewModelProtocol
+    
+    init(viewModel: SelectDateViewModelProtocol) {
+        self.viewModel = viewModel
+        
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     private lazy var selectDateView = SelectDateView()
-
-    var serviceName: String?
 
     override func loadView() {
 
@@ -39,11 +49,14 @@ class SelectDateViewController: UIViewController {
     
     @objc private func didTapSaveButton() {
         
-        UserDefaults.standard.set(selectDateView.timeIntervalSince1970,
-                                  forKey: ServiceKeys.serviceDate.rawValue)
-        
-        UserDefaults.standard.set(serviceName,
-                                  forKey: ServiceKeys.serviceName.rawValue)
+        viewModel.saveService(name: viewModel.serviceName,
+                              date: selectDateView.timeIntervalSince1970)
+    }
+}
+
+extension SelectDateViewController: SelectDateViewDelegate {
+    
+    func didSaveService() {
         
         dismiss(animated: true)
     }

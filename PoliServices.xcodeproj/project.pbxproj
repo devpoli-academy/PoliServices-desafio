@@ -38,6 +38,9 @@
 		60CE81B2297768C6009667C5 /* SelectServicesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60CE81B1297768C6009667C5 /* SelectServicesModel.swift */; };
 		60CE81B529776FF0009667C5 /* SystemImageName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60CE81B429776FF0009667C5 /* SystemImageName.swift */; };
 		60CE81B729777572009667C5 /* CustomColorAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60CE81B629777572009667C5 /* CustomColorAdapter.swift */; };
+		60CE81BC29777EB1009667C5 /* SelectDateViewModelProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60CE81BB29777EB1009667C5 /* SelectDateViewModelProtocols.swift */; };
+		60CE81BE29777EC2009667C5 /* SelectDateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60CE81BD29777EC2009667C5 /* SelectDateViewModel.swift */; };
+		60CE81C0297784D1009667C5 /* ScheduledServiceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60CE81BF297784D1009667C5 /* ScheduledServiceModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +77,9 @@
 		60CE81B1297768C6009667C5 /* SelectServicesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectServicesModel.swift; sourceTree = "<group>"; };
 		60CE81B429776FF0009667C5 /* SystemImageName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemImageName.swift; sourceTree = "<group>"; };
 		60CE81B629777572009667C5 /* CustomColorAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColorAdapter.swift; sourceTree = "<group>"; };
+		60CE81BB29777EB1009667C5 /* SelectDateViewModelProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectDateViewModelProtocols.swift; sourceTree = "<group>"; };
+		60CE81BD29777EC2009667C5 /* SelectDateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectDateViewModel.swift; sourceTree = "<group>"; };
+		60CE81BF297784D1009667C5 /* ScheduledServiceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduledServiceModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,8 +201,9 @@
 		4BCB961929565F7A00B15A58 /* SelectDate */ = {
 			isa = PBXGroup;
 			children = (
-				4C30F0A729391842002C3068 /* SelectDateViewController.swift */,
-				4BF27F23296BA24E0097637D /* SelectDateView.swift */,
+				60CE81BA29777E88009667C5 /* Model */,
+				60CE81B929777E83009667C5 /* View */,
+				60CE81B829777E7A009667C5 /* ViewModel */,
 			);
 			path = SelectDate;
 			sourceTree = "<group>";
@@ -302,6 +309,32 @@
 			path = Images;
 			sourceTree = "<group>";
 		};
+		60CE81B829777E7A009667C5 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				60CE81BB29777EB1009667C5 /* SelectDateViewModelProtocols.swift */,
+				60CE81BD29777EC2009667C5 /* SelectDateViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		60CE81B929777E83009667C5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4C30F0A729391842002C3068 /* SelectDateViewController.swift */,
+				4BF27F23296BA24E0097637D /* SelectDateView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		60CE81BA29777E88009667C5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				60CE81BF297784D1009667C5 /* ScheduledServiceModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -374,6 +407,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4BF27F24296BA24E0097637D /* SelectDateView.swift in Sources */,
+				60CE81BE29777EC2009667C5 /* SelectDateViewModel.swift in Sources */,
 				60CE81B2297768C6009667C5 /* SelectServicesModel.swift in Sources */,
 				4B6F4B80295783CE00D67D79 /* CustomTimer.swift in Sources */,
 				4B7AE5AD296B46230060AD41 /* CustomLabel.swift in Sources */,
@@ -381,6 +415,7 @@
 				60CE81AB2977618D009667C5 /* SelectServiceViewModel.swift in Sources */,
 				4C30F0A829391842002C3068 /* SelectDateViewController.swift in Sources */,
 				4BCB961F2956602700B15A58 /* HomeViewModelProtocols.swift in Sources */,
+				60CE81C0297784D1009667C5 /* ScheduledServiceModel.swift in Sources */,
 				4BCB961D29565FF400B15A58 /* HomeViewModel.swift in Sources */,
 				60CE81B529776FF0009667C5 /* SystemImageName.swift in Sources */,
 				4C55034929379F3600699589 /* HomeViewController.swift in Sources */,
@@ -389,6 +424,7 @@
 				4B15571C296B746C001C8C7F /* CustomImageView.swift in Sources */,
 				4B94CE79296B50C500144E87 /* UIColor+Extension.swift in Sources */,
 				4B15571E296B7B0D001C8C7F /* CustomButton.swift in Sources */,
+				60CE81BC29777EB1009667C5 /* SelectDateViewModelProtocols.swift in Sources */,
 				60CE81B729777572009667C5 /* CustomColorAdapter.swift in Sources */,
 				60CE81AF297767BE009667C5 /* CustomColor.swift in Sources */,
 				4B94CE7D296B56B700144E87 /* LastServiceView.swift in Sources */,
