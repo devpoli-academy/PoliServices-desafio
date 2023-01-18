@@ -3,7 +3,7 @@ import UIKit
 class CustomDividerView: UIView {
     
     init(
-        color: UIColor = .systemIndigo
+        color: UIColor = .mainIndigo
     ) {
         super.init(frame: .zero)
         

@@ -164,7 +164,6 @@
 		4B94CE77296B50B800144E87 /* Colors */ = {
 			isa = PBXGroup;
 			children = (
-				4B94CE78296B50C500144E87 /* UIColor+Extension.swift */,
 				60CE81AE297767BE009667C5 /* CustomColor.swift */,
 				60CE81B629777572009667C5 /* CustomColorAdapter.swift */,
 			);
@@ -339,6 +338,7 @@
 			isa = PBXGroup;
 			children = (
 				60CE81C229778B78009667C5 /* Date+Extension.swift */,
+				4B94CE78296B50C500144E87 /* UIColor+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
