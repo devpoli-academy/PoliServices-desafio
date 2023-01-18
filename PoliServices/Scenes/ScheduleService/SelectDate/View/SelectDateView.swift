@@ -15,12 +15,19 @@ class SelectDateView: UIView {
         let datePicker = UIDatePicker()
         
         datePicker.translatesAutoresizingMaskIntoConstraints = false
-        datePicker.preferredDatePickerStyle = .inline
         datePicker.datePickerMode = .dateAndTime
         datePicker.locale = Locale(identifier: "pt_BR")
         datePicker.minuteInterval = 1
         datePicker.minimumDate = Date()
         datePicker.date = Calendar.current.date(byAdding: .minute, value: 1, to: Date()) ?? Date()
+        
+        if #available(iOS 14.0, *) {
+            datePicker.preferredDatePickerStyle = .inline
+        }
+        
+        if #available(iOS 13.4, *) {
+            datePicker.preferredDatePickerStyle = .automatic
+        }
         
         return datePicker
     }()

@@ -42,10 +42,16 @@ class CustomButton: UIView {
         
         mainButton.translatesAutoresizingMaskIntoConstraints = false
         
-        var configuration = UIButton.Configuration.tinted()
-        configuration.cornerStyle = .capsule
+        if #available(iOS 15.0, *) {
+            var configuration = UIButton.Configuration.tinted()
+            
+            configuration.cornerStyle = .capsule
+            
+            mainButton.configuration = configuration
+        } else {
+            mainButton.layer.cornerRadius = 16
+        }
         
-        mainButton.configuration = configuration
         mainButton.setTitle(title, for: .normal)
         mainButton.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .bold)
         mainButton.addTarget(self, action: #selector(didTapCustomButton), for: .touchUpInside)
