@@ -332,7 +332,6 @@ DevServices</string>
                     <connections>
                         <outlet property="datePicker" destination="CiD-6M-sC8" id="H4g-R4-YOt"/>
                         <outlet property="salvar" destination="LeN-Q2-61q" id="tyk-K9-so3"/>
-                        <outlet property="salvarBtn" destination="LeN-Q2-61q" id="K5h-Bh-pAR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vye-0B-tCl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
